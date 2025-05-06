@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 //using TMPro;
 
-public class LevelButtons12 : MonoBehaviour
+public class LevelButtons12 : Singleton<LevelButtons12>
 {
     [SerializeField] private Sprite lockedSprite, unlockedSprite;
     [SerializeField] private Button[] levelButtons;
 
-    void Start()
+    public void HandlerLevel()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
@@ -23,7 +23,6 @@ public class LevelButtons12 : MonoBehaviour
             if (levelIndex <= unlockedLevel)
             {
                 // Level da mo khoa
-                button.interactable = true;
                 //buttonText.gameObject.SetActive(true);
                 buttonImage.sprite = unlockedSprite;
 
@@ -32,19 +31,12 @@ public class LevelButtons12 : MonoBehaviour
             else
             {
                 // Level chua mo khoa
-                button.interactable = false;
                 //buttonText.gameObject.SetActive(false);
                 buttonImage.sprite = lockedSprite;
             }
 
-            //if (buttonText)
-                //buttonText.text = levelIndex < 10 ? "0" + levelIndex : levelIndex.ToString();
+            //if (buttonText) buttonText.text = levelIndex.ToString("00");
         }
-    }
-
-    void Update()
-    {
-
     }
 
     private void LoadLevel(int levelIndex) => GameManager12.Instance.SetCurrentLV(levelIndex);

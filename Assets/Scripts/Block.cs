@@ -102,8 +102,6 @@ public class Block : MonoBehaviour
         else SetBlock(targetNode ?? startNode);
     }
 
-    public void SetWoodBox() => id = -1;
-
     private IEnumerator OpenBox()
     {
         float duration = 0.5f;

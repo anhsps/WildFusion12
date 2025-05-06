@@ -92,7 +92,6 @@ public class ShopSystem : MonoBehaviour
 
     private void ClearNoti() => notiText.text = "";
 
-    // save prices
     public void SavePrices()
     {
         for (int i = 0; i < prices.Count; i++)

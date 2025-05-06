@@ -23,18 +23,6 @@ public class SoundManager12 : Singleton<SoundManager12>
         SetUpButtons();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void ToggleSound()
     {
         soundEnabled = !soundEnabled;

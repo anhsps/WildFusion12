@@ -698,6 +698,7 @@ MonoBehaviour:
   lvText: {fileID: 890077631}
   coinText: {fileID: 900997086}
   coinSecText: {fileID: 10467202}
+  currentLV: 0
   levelExp: 0
   coin: 0
   key: 
@@ -10141,6 +10142,7 @@ GameObject:
   - component: {fileID: 1130915027}
   - component: {fileID: 1130915029}
   - component: {fileID: 1130915028}
+  - component: {fileID: 1130915030}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -10187,7 +10189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 76b9cd88bb1992849aa5ecd4ea26e70f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e8fb4a82adf3b643ad9dd2e5d0be154, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10205,6 +10207,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130915026}
   m_CullTransparentMesh: 1
+--- !u!114 &1130915030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130915026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d58f204e3a9e04995a5e192d189159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgImages:
+  - {fileID: 21300000, guid: 76b9cd88bb1992849aa5ecd4ea26e70f, type: 3}
+  - {fileID: 21300000, guid: d274c6a15b31e404092c079140a142e4, type: 3}
+  - {fileID: 21300000, guid: 5e8fb4a82adf3b643ad9dd2e5d0be154, type: 3}
 --- !u!1 &1136055803
 GameObject:
   m_ObjectHideFlags: 0

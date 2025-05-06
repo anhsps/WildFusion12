@@ -222,7 +222,6 @@ public class GameMain : Singleton<GameMain>
         return price.ToString();
     }
 
-    // save game
     public void SaveGame()
     {
         PlayerPrefs.SetInt(key + "Coin", coin);
