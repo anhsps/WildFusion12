@@ -152,6 +152,7 @@ public class GameMain : Singleton<GameMain>
 
     public void Merge(Block a, Block b)
     {
+        SoundManager12.Instance.PlaySound(6);
         blocks.Remove(a);
         a.SetBlock(null);
         Destroy(a.gameObject);
@@ -161,6 +162,7 @@ public class GameMain : Singleton<GameMain>
 
         int index = GetIndex(b.id) + 1;
         b.SetState(states[index]);
+        StartCoroutine(b.OpenBox());
     }
 
     private void Swap(Block a, Block b)

@@ -102,9 +102,9 @@ public class Block : MonoBehaviour
         else SetBlock(targetNode ?? startNode);
     }
 
-    private IEnumerator OpenBox()
+    public IEnumerator OpenBox()
     {
-        float duration = 0.5f;
+        float duration = 0.4f;
         Vector3 scale = transform.localScale;
         yield return ChangeScale(scale * 1.3f, duration / 2);
         yield return ChangeScale(scale, duration / 2);
